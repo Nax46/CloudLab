@@ -10,6 +10,19 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-three': ['three'],
+          'vendor-gsap': ['gsap'],
+          'vendor-ui': ['lucide-react', 'recharts', 'canvas-confetti'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
   // @ts-expect-error vitest configuration field
   test: {
     globals: true,

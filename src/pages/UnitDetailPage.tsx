@@ -190,7 +190,7 @@ export const UnitDetailPage: React.FC = () => {
 
                 {t.key_points && t.key_points.length > 0 && (
                   <div className="pt-3 border-t border-slate-150 flex flex-wrap gap-2">
-                    {t.key_points.slice(0, 3).map((kp, kidx) => (
+                    {t.key_points.slice(0, 3).map((kp: string, kidx: number) => (
                       <span
                         key={kidx}
                         className="text-[11px] px-2.5 py-1 rounded-md bg-slate-50 border border-slate-200 text-slate-700"
@@ -250,7 +250,7 @@ export const UnitDetailPage: React.FC = () => {
       {activeTab === 'quiz' && (
         <div>
           {quiz ? (
-            <QuizRunner quizId={quiz.id} unitTitle={unit.title} />
+            <QuizRunner quiz={quiz} />
           ) : (
             <div className="p-8 text-center text-slate-500 bg-white rounded-xl border border-slate-200 space-y-2">
               <Award className="w-8 h-8 text-slate-400 mx-auto" />

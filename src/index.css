@@ -8,7 +8,77 @@
   }
 }
 
-/* Custom Light-Theme Scrollbars */
+/* Light Theme Universal Card Overrides for Clean Academic Look */
+.bg-slate-900 {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.bg-slate-950 {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+  border-color: #e2e8f0 !important;
+}
+
+.bg-slate-850, .bg-slate-800 {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.text-white {
+  color: #0f172a !important;
+}
+
+.text-slate-400 {
+  color: #64748b !important;
+}
+
+.text-slate-300 {
+  color: #475569 !important;
+}
+
+.text-slate-200 {
+  color: #334155 !important;
+}
+
+.border-slate-800, .border-slate-850, .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+.text-cyan-400, .text-cyan-300 {
+  color: #2563eb !important;
+}
+
+.bg-cyan-950, .bg-cyan-950\/70, .bg-cyan-950\/80 {
+  background-color: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+
+.bg-cyan-600 {
+  background-color: #2563eb !important;
+}
+
+.hover\:bg-cyan-500:hover {
+  background-color: #1d4ed8 !important;
+}
+
+.bg-emerald-950, .bg-emerald-950\/40, .bg-emerald-950\/60 {
+  background-color: #f0fdf4 !important;
+  color: #166534 !important;
+  border-color: #bbf7d0 !important;
+}
+
+.bg-amber-950, .bg-amber-950\/40, .bg-amber-950\/60 {
+  background-color: #fffbeb !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+}
+
+/* Light Theme Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -24,9 +94,10 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
+  background: #2563eb;
 }
 
+/* Base fade animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
