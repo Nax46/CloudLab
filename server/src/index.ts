@@ -43,7 +43,7 @@ const allowedOrigins = [
 
 app.use(
   cors({
-    origin: (origin, callback) => {
+    origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
       // Allow requests with no origin (like mobile apps, curl, server-to-server) or matching allowed origins
       if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== 'production') {
         callback(null, true);
@@ -86,7 +86,7 @@ app.use('/api/resources', resourcesRoutes);
 app.use('/api/search', searchRoutes);
 
 // Root route
-app.get('/', (req, res) => {
+app.get('/', (req: express.Request, res: express.Response) => {
   res.json({
     name: 'CloudLab API',
     description: 'Fundamental of Cloud Computing (FCC) Educational REST API',
